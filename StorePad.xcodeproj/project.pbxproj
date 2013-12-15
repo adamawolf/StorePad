@@ -21,6 +21,8 @@
 		94C1DA93185E6652004D09D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C1DA75185E6652004D09D0 /* UIKit.framework */; };
 		94C1DA9B185E6652004D09D0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 94C1DA99185E6652004D09D0 /* InfoPlist.strings */; };
 		94C1DA9D185E6652004D09D0 /* StorePadTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C1DA9C185E6652004D09D0 /* StorePadTests.m */; };
+		94C1DAA9185E6682004D09D0 /* StorePad.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 94C1DAA7185E6682004D09D0 /* StorePad.xcdatamodeld */; };
+		94C1DAAE185E68E6004D09D0 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C1DAAD185E68E6004D09D0 /* Store.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,10 @@
 		94C1DA98185E6652004D09D0 /* StorePadTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StorePadTests-Info.plist"; sourceTree = "<group>"; };
 		94C1DA9A185E6652004D09D0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		94C1DA9C185E6652004D09D0 /* StorePadTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StorePadTests.m; sourceTree = "<group>"; };
+		94C1DAA8185E6682004D09D0 /* StorePad_010000_00.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StorePad_010000_00.xcdatamodel; sourceTree = "<group>"; };
+		94C1DAAA185E6699004D09D0 /* StorePad_010000_01.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = StorePad_010000_01.xcdatamodel; sourceTree = "<group>"; };
+		94C1DAAC185E68E6004D09D0 /* Store.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Store.h; sourceTree = "<group>"; };
+		94C1DAAD185E68E6004D09D0 /* Store.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Store.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +118,7 @@
 		94C1DA77185E6652004D09D0 /* StorePad */ = {
 			isa = PBXGroup;
 			children = (
+				94C1DAA6185E6667004D09D0 /* CoreData */,
 				94C1DA80185E6652004D09D0 /* SPAppDelegate.h */,
 				94C1DA81185E6652004D09D0 /* SPAppDelegate.m */,
 				94C1DA83185E6652004D09D0 /* Main.storyboard */,
@@ -150,6 +157,24 @@
 				94C1DA99185E6652004D09D0 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		94C1DAA6185E6667004D09D0 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				94C1DAAB185E68D7004D09D0 /* Models */,
+				94C1DAA7185E6682004D09D0 /* StorePad.xcdatamodeld */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		94C1DAAB185E68D7004D09D0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				94C1DAAC185E68E6004D09D0 /* Store.h */,
+				94C1DAAD185E68E6004D09D0 /* Store.m */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +278,8 @@
 				94C1DA7E185E6652004D09D0 /* main.m in Sources */,
 				94C1DA88185E6652004D09D0 /* SPViewController.m in Sources */,
 				94C1DA82185E6652004D09D0 /* SPAppDelegate.m in Sources */,
+				94C1DAAE185E68E6004D09D0 /* Store.m in Sources */,
+				94C1DAA9185E6682004D09D0 /* StorePad.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +488,7 @@
 				94C1DAA2185E6652004D09D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		94C1DAA3185E6652004D09D0 /* Build configuration list for PBXNativeTarget "StorePadTests" */ = {
 			isa = XCConfigurationList;
@@ -469,8 +497,23 @@
 				94C1DAA5185E6652004D09D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		94C1DAA7185E6682004D09D0 /* StorePad.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				94C1DAA8185E6682004D09D0 /* StorePad_010000_00.xcdatamodel */,
+				94C1DAAA185E6699004D09D0 /* StorePad_010000_01.xcdatamodel */,
+			);
+			currentVersion = 94C1DAAA185E6699004D09D0 /* StorePad_010000_01.xcdatamodel */;
+			path = StorePad.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 94C1DA66185E6652004D09D0 /* Project object */;
 }

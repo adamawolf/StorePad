@@ -244,7 +244,7 @@ static dispatch_queue_t background_save_queue()
                              @"state": @"CA",
                              @"phoneNumber": @"510-522-222",
                              @"fax": @"510-522-8880"
-                         },
+                             },
                          @{
                              @"name" : @"Berkeley",
                              @"addressLine1": @"1760 Fourth Street",
@@ -252,7 +252,85 @@ static dispatch_queue_t background_save_queue()
                              @"zip": @"94710",
                              @"state": @"CA",
                              @"phoneNumber": @"510-525-7777",
-                             }
+                             },
+                         @{
+                             @"name" : @"Burlingame",
+                             @"addressLine1": @"1375 Burlingame Avenue",
+                             @"city": @"Burlingame",
+                             @"zip": @"94010",
+                             @"state": @"CA",
+                             @"phoneNumber": @"650-685-4911",
+                             @"fax": @"650-685-4914"
+                             },
+                         @{
+                             @"name" : @"Castro",
+                             @"addressLine1": @"2275 Market Street",
+                             @"city": @"San Francisco",
+                             @"zip": @"94103",
+                             @"state": @"CA",
+                             @"phoneNumber": @"415-864-6777",
+                             },
+                         @{
+                             @"name" : @"Laurel Village",
+                             @"addressLine1": @"515 California Street",
+                             @"city": @"San Francisco",
+                             @"zip": @"94118",
+                             @"state": @"CA",
+                             @"phoneNumber": @"415-221-3666",
+                             },
+                         @{
+                             @"name" : @"Marina",
+                             @"addressLine1": @"2251 Chestnut Street",
+                             @"city": @"San Francisco",
+                             @"zip": @"94123",
+                             @"state": @"CA",
+                             @"phoneNumber": @"415-931-3633",
+                             },
+                         @{
+                             @"name" : @"Mountain View",
+                             @"addressLine1": @"301 Castro Street",
+                             @"city": @"Mountain View",
+                             @"zip": @"94041",
+                             @"state": @"CA",
+                             @"phoneNumber": @"650-428-1234",
+                             @"fax": @"650-428-1247"
+                             },
+                         @{
+                             @"name" : @"Opera Plaza",
+                             @"addressLine1": @"601 Van Ness",
+                             @"city": @"San Francisco",
+                             @"zip": @"94102",
+                             @"state": @"CA",
+                             @"phoneNumber": @"415-776-1111",
+                             },
+                         @{
+                             @"name" : @"Palo Alto",
+                             @"addressLine1": @"855 El Camino Real #74",
+                             @"city": @"Palo Alto",
+                             @"zip": @"94301",
+                             @"state": @"CA",
+                             @"phoneNumber": @"650-321-0600",
+                             @"fax": @"650-321-6069"
+                             },
+                         @{
+                             @"name" : @"Terminal 2",
+                             @"addressLine1": @"Terminal 2",
+                             @"addressLine2": @"San Francisco International Airport",
+                             @"city": @"San Francisco",
+                             @"zip": @"94128",
+                             @"state": @"CA",
+                             @"phoneNumber": @"650-821-9299",
+                             },
+                         @{
+                             @"name" : @"Terminal 3",
+                             @"addressLine1": @"Terminal 3",
+                             @"addressLine2": @"San Francisco International Airport",
+                             @"city": @"San Francisco",
+                             @"zip": @"94128",
+                             @"state": @"CA",
+                             @"phoneNumber": @"650-244-0610",
+                             @"fax": @"650-244-0620",
+                             },
                          ];
     
     [stores enumerateObjectsUsingBlock:^(NSDictionary * currentStoreDict, NSUInteger index, BOOL * stop) {

@@ -7,12 +7,20 @@
 //
 
 #import "SPAppDelegate.h"
+#import "SPCoreDataController.h"
+
 
 @implementation SPAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+#ifdef CONTENTGEN
+    [[SPCoreDataController sharedController] generateContent];
+#else
+    [[SPCoreDataController sharedController] createEditableCopyOfContentDatabaseIfNeeded];
+    DLog(@"%@", [[SPCoreDataController sharedController] fetchAllStoreDictionaries]);
+#endif
+    
     return YES;
 }
 							

@@ -13,4 +13,14 @@
 #ifdef __OBJC__
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
+    #import "Definitions.h"
 #endif
+
+
+#ifdef DLOG
+#define DLog(s, ...) NSLog(@"%s(line %d): " s, __func__, __LINE__, ## __VA_ARGS__)
+#else
+#define DLog(...) do{ }while(0)
+#endif
+#define DMark() (NSLog(@" "))
+#define ALog(...) NSLog(__VA_ARGS__)

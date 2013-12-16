@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ContentGen.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>StorePad.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +23,11 @@
 			<true/>
 		</dict>
 		<key>94C1DA8E185E6652004D09D0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>94C1DABC185E73C9004D09D0</key>
 		<dict>
 			<key>primary</key>
 			<true/>

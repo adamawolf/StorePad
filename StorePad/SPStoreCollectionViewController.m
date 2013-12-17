@@ -7,18 +7,26 @@
 //
 
 #import "SPStoreCollectionViewController.h"
+#import "SPCoreDataController.h"
 
 static NSString * StoreCellIdentifier = @"SPStoreCollectionViewCell";
 
-@interface SPStoreCollectionViewController () <UICollectionViewDataSource, UICollectionViewDelegate>
+@interface SPStoreCollectionViewController () <UICollectionViewDataSource, UICollectionViewDelegate, SPCoreDataControllerStoreLoadingDelegate>
+
+@property (nonatomic, strong) NSArray * stores;
 
 @end
 
 @implementation SPStoreCollectionViewController
 
+- (void) viewDidLoad
+{
+    [[SPCoreDataController sharedController] fetchAllStoreDictionariesInBackgroundWithDelegate:self];
+}
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 5;
+    return [[self stores] count];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -33,6 +41,14 @@ static NSString * StoreCellIdentifier = @"SPStoreCollectionViewCell";
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     return CGSizeMake(160.0f, 160.0f);
+}
+
+#pragma mark - SPCoreDataControllerStoreLoadingDelegate methods
+
+- (void) coreDataController: (SPCoreDataController *) coreDataController didLoadAllStoreDictionaries: (NSArray *) storeDictionaries
+{
+    [self setStores:storeDictionaries];
+    [[self collectionView] reloadSections:[NSIndexSet indexSetWithIndex:0]];
 }
 
 @end

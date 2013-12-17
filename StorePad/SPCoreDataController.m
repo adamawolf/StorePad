@@ -389,11 +389,11 @@ static dispatch_queue_t background_save_queue()
 }
 //#endif
 
-- (NSArray *) fetchAllStoreDictionaries
+- (NSArray *) fetchAllStoreDictionariesWithContext: (NSManagedObjectContext *) context
 {
     NSFetchRequest * request = [[NSFetchRequest alloc] init];
     
-    NSEntityDescription * entity = [NSEntityDescription entityForName:@"Store" inManagedObjectContext:[self managedObjectContext]];
+    NSEntityDescription * entity = [NSEntityDescription entityForName:@"Store" inManagedObjectContext:context];
     [request setEntity:entity];
     
     [request setResultType:NSDictionaryResultType];
@@ -402,9 +402,22 @@ static dispatch_queue_t background_save_queue()
     [request setSortDescriptors:@[[NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES]]];
     
     NSError * error = nil;
-    NSArray * results = [[self managedObjectContext] executeFetchRequest:request error:&error];
+    NSArray * results = [context executeFetchRequest:request error:&error];
     
     return results;
+}
+
+- (void) fetchAllStoreDictionariesInBackgroundWithDelegate: (id<SPCoreDataControllerStoreLoadingDelegate>) delegate
+{
+    __block NSArray * results = nil;
+    
+    [self saveDataInBackgroundWithContext:^(NSManagedObjectContext * backgroundContext){
+        results = [self fetchAllStoreDictionariesWithContext:backgroundContext];
+    } completion:^{
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [delegate coreDataController:self didLoadAllStoreDictionaries:results];
+        });
+    }];
 }
 
 @end

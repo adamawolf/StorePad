@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		943841D31861115C00AE5CF6 /* SPStoreCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 943841D21861115C00AE5CF6 /* SPStoreCollectionViewController.m */; };
+		943841D8186111DC00AE5CF6 /* SPStoreCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 943841D7186111DC00AE5CF6 /* SPStoreCollectionViewCell.m */; };
 		94C1DA72185E6652004D09D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C1DA71185E6652004D09D0 /* Foundation.framework */; };
 		94C1DA74185E6652004D09D0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C1DA73185E6652004D09D0 /* CoreGraphics.framework */; };
 		94C1DA76185E6652004D09D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C1DA75185E6652004D09D0 /* UIKit.framework */; };
@@ -14,7 +16,6 @@
 		94C1DA7E185E6652004D09D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C1DA7D185E6652004D09D0 /* main.m */; };
 		94C1DA82185E6652004D09D0 /* SPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C1DA81185E6652004D09D0 /* SPAppDelegate.m */; };
 		94C1DA85185E6652004D09D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94C1DA83185E6652004D09D0 /* Main.storyboard */; };
-		94C1DA88185E6652004D09D0 /* SPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C1DA87185E6652004D09D0 /* SPViewController.m */; };
 		94C1DA8A185E6652004D09D0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94C1DA89185E6652004D09D0 /* Images.xcassets */; };
 		94C1DA91185E6652004D09D0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C1DA90185E6652004D09D0 /* XCTest.framework */; };
 		94C1DA92185E6652004D09D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C1DA71185E6652004D09D0 /* Foundation.framework */; };
@@ -29,7 +30,6 @@
 		94C1DABB185E70D8004D09D0 /* Content.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 94C1DABA185E70D8004D09D0 /* Content.sqlite */; };
 		94C1DABE185E73C9004D09D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C1DA7D185E6652004D09D0 /* main.m */; };
 		94C1DABF185E73C9004D09D0 /* Definitions.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C1DAB7185E6AF5004D09D0 /* Definitions.m */; };
-		94C1DAC0185E73C9004D09D0 /* SPViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C1DA87185E6652004D09D0 /* SPViewController.m */; };
 		94C1DAC1185E73C9004D09D0 /* SPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C1DA81185E6652004D09D0 /* SPAppDelegate.m */; };
 		94C1DAC2185E73C9004D09D0 /* SPCoreDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C1DAB1185E6974004D09D0 /* SPCoreDataController.m */; };
 		94C1DAC3185E73C9004D09D0 /* Store.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C1DAAD185E68E6004D09D0 /* Store.m */; };
@@ -55,6 +55,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		943841D11861115C00AE5CF6 /* SPStoreCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPStoreCollectionViewController.h; sourceTree = "<group>"; };
+		943841D21861115C00AE5CF6 /* SPStoreCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPStoreCollectionViewController.m; sourceTree = "<group>"; };
+		943841D6186111DC00AE5CF6 /* SPStoreCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPStoreCollectionViewCell.h; sourceTree = "<group>"; };
+		943841D7186111DC00AE5CF6 /* SPStoreCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPStoreCollectionViewCell.m; sourceTree = "<group>"; };
 		94C1DA6E185E6652004D09D0 /* StorePad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StorePad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94C1DA71185E6652004D09D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		94C1DA73185E6652004D09D0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -66,8 +70,6 @@
 		94C1DA80185E6652004D09D0 /* SPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPAppDelegate.h; sourceTree = "<group>"; };
 		94C1DA81185E6652004D09D0 /* SPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPAppDelegate.m; sourceTree = "<group>"; };
 		94C1DA84185E6652004D09D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		94C1DA86185E6652004D09D0 /* SPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SPViewController.h; sourceTree = "<group>"; };
-		94C1DA87185E6652004D09D0 /* SPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SPViewController.m; sourceTree = "<group>"; };
 		94C1DA89185E6652004D09D0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		94C1DA8F185E6652004D09D0 /* StorePadTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StorePadTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94C1DA90185E6652004D09D0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -124,6 +126,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		943841D41861118800AE5CF6 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				943841D11861115C00AE5CF6 /* SPStoreCollectionViewController.h */,
+				943841D21861115C00AE5CF6 /* SPStoreCollectionViewController.m */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		943841D51861119800AE5CF6 /* Collection View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				943841D6186111DC00AE5CF6 /* SPStoreCollectionViewCell.h */,
+				943841D7186111DC00AE5CF6 /* SPStoreCollectionViewCell.m */,
+			);
+			name = "Collection View Cells";
+			sourceTree = "<group>";
+		};
 		94C1DA65185E6652004D09D0 = {
 			isa = PBXGroup;
 			children = (
@@ -162,13 +182,13 @@
 			children = (
 				94C1DAB6185E6AF5004D09D0 /* Definitions.h */,
 				94C1DAB7185E6AF5004D09D0 /* Definitions.m */,
-				94C1DAAF185E695A004D09D0 /* Controllers */,
-				94C1DAA6185E6667004D09D0 /* CoreData */,
 				94C1DA80185E6652004D09D0 /* SPAppDelegate.h */,
 				94C1DA81185E6652004D09D0 /* SPAppDelegate.m */,
 				94C1DA83185E6652004D09D0 /* Main.storyboard */,
-				94C1DA86185E6652004D09D0 /* SPViewController.h */,
-				94C1DA87185E6652004D09D0 /* SPViewController.m */,
+				94C1DAAF185E695A004D09D0 /* Controllers */,
+				94C1DAA6185E6667004D09D0 /* CoreData */,
+				943841D51861119800AE5CF6 /* Collection View Cells */,
+				943841D41861118800AE5CF6 /* View Controller */,
 				94C1DA89185E6652004D09D0 /* Images.xcassets */,
 				94C1DAB9185E70C1004D09D0 /* Content */,
 				94C1DA78185E6652004D09D0 /* Supporting Files */,
@@ -370,10 +390,11 @@
 			files = (
 				94C1DA7E185E6652004D09D0 /* main.m in Sources */,
 				94C1DAB8185E6AF5004D09D0 /* Definitions.m in Sources */,
-				94C1DA88185E6652004D09D0 /* SPViewController.m in Sources */,
 				94C1DA82185E6652004D09D0 /* SPAppDelegate.m in Sources */,
 				94C1DAB2185E6974004D09D0 /* SPCoreDataController.m in Sources */,
 				94C1DAAE185E68E6004D09D0 /* Store.m in Sources */,
+				943841D8186111DC00AE5CF6 /* SPStoreCollectionViewCell.m in Sources */,
+				943841D31861115C00AE5CF6 /* SPStoreCollectionViewController.m in Sources */,
 				94C1DAA9185E6682004D09D0 /* StorePad.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,7 +413,6 @@
 			files = (
 				94C1DABE185E73C9004D09D0 /* main.m in Sources */,
 				94C1DABF185E73C9004D09D0 /* Definitions.m in Sources */,
-				94C1DAC0185E73C9004D09D0 /* SPViewController.m in Sources */,
 				94C1DAC1185E73C9004D09D0 /* SPAppDelegate.m in Sources */,
 				94C1DAC2185E73C9004D09D0 /* SPCoreDataController.m in Sources */,
 				94C1DAC3185E73C9004D09D0 /* Store.m in Sources */,

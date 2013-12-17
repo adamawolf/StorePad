@@ -10,6 +10,7 @@
 #import "SPCoreDataController.h"
 
 
+
 @implementation SPAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -18,7 +19,6 @@
     [[SPCoreDataController sharedController] generateContent];
 #else
     [[SPCoreDataController sharedController] createEditableCopyOfContentDatabaseIfNeeded];
-    DLog(@"%@", [[SPCoreDataController sharedController] fetchAllStoreDictionaries]);
 #endif
     
     return YES;

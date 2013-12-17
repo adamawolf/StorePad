@@ -9,6 +9,14 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class SPCoreDataController;
+
+@protocol SPCoreDataControllerStoreLoadingDelegate <NSObject>
+
+- (void) coreDataController: (SPCoreDataController *) coreDataController didLoadAllStoreDictionaries: (NSArray *) storeDictionaries;
+
+@end
+
 @interface SPCoreDataController : NSObject
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
@@ -28,6 +36,6 @@
 
 - (void) createEditableCopyOfContentDatabaseIfNeeded;
 
-- (NSArray *) fetchAllStoreDictionaries;
+- (void) fetchAllStoreDictionariesInBackgroundWithDelegate: (id<SPCoreDataControllerStoreLoadingDelegate>) delegate;
 
 @end

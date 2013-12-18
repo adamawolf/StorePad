@@ -54,18 +54,34 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mountain View" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="87" translatesAutoresizingMaskIntoConstraints="NO" id="irU-zc-6fH">
-                                                    <rect key="frame" x="29" y="22" width="87" height="56"/>
+                                                    <rect key="frame" x="29" y="18" width="87" height="56"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
-                                                    <color key="shadowColor" red="1" green="1" blue="1" alpha="0.46000000000000002" colorSpace="calibratedRGB"/>
+                                                    <color key="shadowColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
                                                     <size key="shadowOffset" width="0.0" height="1"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="221-Sg-MmB">
+                                                    <rect key="frame" x="93" y="93" width="44" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" image="map_icon">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted" image="map_icon_highlighted"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQv-68-Ec5">
+                                                    <rect key="frame" x="8" y="93" width="44" height="44"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" image="call_icon">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <state key="highlighted" image="call_icon_highlighted"/>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="centerY" secondItem="irU-zc-6fH" secondAttribute="centerY" constant="23" id="0oF-3S-D3r"/>
+                                                <constraint firstAttribute="centerY" secondItem="irU-zc-6fH" secondAttribute="centerY" constant="27" id="0oF-3S-D3r"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="irU-zc-6fH" secondAttribute="trailing" constant="10" id="YTm-zU-qNL"/>
                                                 <constraint firstAttribute="centerX" secondItem="irU-zc-6fH" secondAttribute="centerX" id="rFJ-Hs-x97"/>
                                                 <constraint firstItem="irU-zc-6fH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="o11-bi-LdP" secondAttribute="leading" constant="10" id="yqi-Os-5B3"/>
@@ -131,6 +147,12 @@
             <point key="canvasLocation" x="572" y="168"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="call_icon" width="31" height="31"/>
+        <image name="call_icon_highlighted" width="31" height="31"/>
+        <image name="map_icon" width="31" height="31"/>
+        <image name="map_icon_highlighted" width="31" height="31"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

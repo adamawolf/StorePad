@@ -40,4 +40,16 @@
     [self layer].cornerRadius = 20.0f;
 }
 
+#pragma mark - Action methods
+
+- (IBAction) callButtonTapped: (id) sender
+{
+    [[self delegate] storeCollectionViewCellDidTapCallButton:self];
+}
+
+- (IBAction) mapButtonTapped: (id) sender
+{
+    [[self delegate] storeCollectionViewCellDidTapMapButton:self];
+}
+
 @end

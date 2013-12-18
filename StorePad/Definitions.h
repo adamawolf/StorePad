@@ -13,6 +13,9 @@
 + (NSString *) contentDataStoreFilename;
 + (NSString *) storeImageNameFromStoreName: (NSString *) storeName;
 
++ (UIColor *) tintColor;
++ (UIColor *) navigationBarTitleColor;
++ (UIColor *) navigationBarBackgroundColor;
 + (UIColor *) viewControllerBackgroundColor;
 
 @end

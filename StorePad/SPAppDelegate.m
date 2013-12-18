@@ -57,11 +57,14 @@
 
 - (void) customizeAppearance
 {
+    [[[[UIApplication sharedApplication] delegate] window] setTintColor:[Definitions tintColor]];
+    
     [[UINavigationBar appearance] setTitleTextAttributes:@{
                                                            NSFontAttributeName : [UIFont fontWithName:@"AcademyEngravedLetPlain" size:22.0f],
+                                                           NSForegroundColorAttributeName : [Definitions navigationBarTitleColor],
                                                            }];
     
-    [[UINavigationBar appearance] setTitleVerticalPositionAdjustment:-1.0f forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setBarTintColor:[Definitions navigationBarBackgroundColor]];
 }
 
 @end

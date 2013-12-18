@@ -30,6 +30,8 @@ static NSString * StoreCellIdentifier = @"SPStoreCollectionViewCell";
     [[SPCoreDataController sharedController] fetchAllStoreDictionariesInBackgroundWithDelegate:self];
 }
 
+#pragma mark - UICollectionViewDataSource methods
+
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return [self stores] != nil ? [[self stores] count] : 1;

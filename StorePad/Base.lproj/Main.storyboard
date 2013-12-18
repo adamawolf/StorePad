@@ -1,10 +1,25 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="uTU-6g-I3c">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="13A603" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ez6-jN-FM1">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
-        <!--Store Collection View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="agd-Y0-Vx5">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="ez6-jN-FM1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="0fu-Y3-dO2">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="uTU-6g-I3c" kind="relationship" relationship="rootViewController" id="Bnj-98-9CX"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mqt-8W-9oY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="51" y="168"/>
+        </scene>
+        <!--Store Collection View Controller - BOOKS INC-->
         <scene sceneID="VxY-SH-cNm">
             <objects>
                 <collectionViewController autoresizesArchivedViewToFullSize="NO" id="uTU-6g-I3c" customClass="SPStoreCollectionViewController" sceneMemberID="viewController">
@@ -19,16 +34,66 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SPStoreCollectionViewCell" id="3QC-24-agi" customClass="SPStoreCollectionViewCell">
-                                <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                <rect key="frame" x="0.0" y="64" width="160" height="160"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fZk-4Z-n9D">
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NSx-uT-HWt">
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                        </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o11-bi-LdP">
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="42" translatesAutoresizingMaskIntoConstraints="NO" id="irU-zc-6fH">
+                                                    <rect key="frame" x="59" y="70" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="irU-zc-6fH" secondAttribute="centerY" id="Csf-7z-Kcs"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="irU-zc-6fH" secondAttribute="trailing" constant="10" id="YTm-zU-qNL"/>
+                                                <constraint firstAttribute="centerX" secondItem="irU-zc-6fH" secondAttribute="centerX" id="rFJ-Hs-x97"/>
+                                                <constraint firstItem="irU-zc-6fH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="o11-bi-LdP" secondAttribute="leading" constant="10" id="yqi-Os-5B3"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="o11-bi-LdP" firstAttribute="top" secondItem="3QC-24-agi" secondAttribute="top" id="1SG-WI-N6R"/>
+                                    <constraint firstAttribute="trailing" secondItem="NSx-uT-HWt" secondAttribute="trailing" id="2hf-tq-9D5"/>
+                                    <constraint firstAttribute="bottom" secondItem="fZk-4Z-n9D" secondAttribute="bottom" id="6pm-hd-utj"/>
+                                    <constraint firstItem="fZk-4Z-n9D" firstAttribute="leading" secondItem="3QC-24-agi" secondAttribute="leading" id="8ff-Hl-tDF"/>
+                                    <constraint firstAttribute="trailing" secondItem="fZk-4Z-n9D" secondAttribute="trailing" id="HUZ-5V-1Fe"/>
+                                    <constraint firstAttribute="bottom" secondItem="NSx-uT-HWt" secondAttribute="bottom" id="Kyr-S9-qJ8"/>
+                                    <constraint firstItem="NSx-uT-HWt" firstAttribute="top" secondItem="3QC-24-agi" secondAttribute="top" id="TiH-zm-cDa"/>
+                                    <constraint firstAttribute="trailing" secondItem="o11-bi-LdP" secondAttribute="trailing" id="WPJ-ec-EWi"/>
+                                    <constraint firstAttribute="bottom" secondItem="o11-bi-LdP" secondAttribute="bottom" id="ZuZ-pw-dr4"/>
+                                    <constraint firstItem="o11-bi-LdP" firstAttribute="leading" secondItem="3QC-24-agi" secondAttribute="leading" id="i1N-ct-Lui"/>
+                                    <constraint firstItem="fZk-4Z-n9D" firstAttribute="top" secondItem="3QC-24-agi" secondAttribute="top" id="qtl-nf-Dc0"/>
+                                    <constraint firstItem="NSx-uT-HWt" firstAttribute="leading" secondItem="3QC-24-agi" secondAttribute="leading" id="yF1-TC-QXo"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="nameLabel" destination="irU-zc-6fH" id="hOh-fR-7oF"/>
+                                    <outlet property="opacityOverlayView" destination="NSx-uT-HWt" id="6Fr-tY-NDs"/>
+                                    <outlet property="storeImageView" destination="fZk-4Z-n9D" id="9s5-iZ-8gC"/>
+                                </connections>
                             </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SPStoreCollectionViewCell" id="uoB-lp-FUD" customClass="SPStoreCollectionViewCell">
-                                <rect key="frame" x="160" y="0.0" width="160" height="160"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="uoB-lp-FUD">
+                                <rect key="frame" x="160" y="64" width="160" height="160"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
@@ -42,6 +107,7 @@
                             <outlet property="delegate" destination="uTU-6g-I3c" id="ABE-GN-HrL"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" title="BOOKS INC" id="31e-LE-rtP"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iKz-xL-spP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

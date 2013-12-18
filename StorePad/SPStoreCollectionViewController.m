@@ -8,6 +8,7 @@
 
 #import "SPStoreCollectionViewController.h"
 #import "SPCoreDataController.h"
+#import "SPStoreCollectionViewCell.h"
 
 static NSString * StoreCellIdentifier = @"SPStoreCollectionViewCell";
 
@@ -35,7 +36,20 @@ static NSString * StoreCellIdentifier = @"SPStoreCollectionViewCell";
     
     cell = [collectionView dequeueReusableCellWithReuseIdentifier:StoreCellIdentifier forIndexPath:indexPath];
     
+    [self configureCell:cell atIndexPath:indexPath];
+    
     return cell;
+}
+
+- (void) configureCell: (UICollectionViewCell *) cell atIndexPath: (NSIndexPath *) indexPath
+{
+    if ([cell isKindOfClass:[SPStoreCollectionViewCell class]])
+    {
+        NSDictionary * storeDictionary = [self stores][indexPath.row];
+        
+        SPStoreCollectionViewCell * storeCell = (SPStoreCollectionViewCell *)cell;
+        [storeCell setStoreDictionary:storeDictionary];
+    }
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath

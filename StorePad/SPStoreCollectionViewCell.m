@@ -20,4 +20,20 @@
     return self;
 }
 
+- (void) setStoreDictionary:(NSDictionary *)storeDictionary
+{
+    _storeDictionary = storeDictionary;
+    
+    DLog(@"todo: process store dict %@", [self storeDictionary]);
+    
+    NSString * imageName = [Definitions storeImageNameFromStoreName:storeDictionary[@"name"]];
+    [[self storeImageView] setImage:[UIImage imageNamed:imageName]];
+    
+    [[self opacityOverlayView] setAlpha:0.46f];
+    
+    [[self nameLabel] setPreferredMaxLayoutWidth:self.frame.size.width - 20.0f];
+    [[self nameLabel] setText:storeDictionary[@"name"]];
+    [[self nameLabel] sizeToFit];
+}
+
 @end

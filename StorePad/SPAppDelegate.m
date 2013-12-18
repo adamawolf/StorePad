@@ -21,6 +21,8 @@
     [[SPCoreDataController sharedController] createEditableCopyOfContentDatabaseIfNeeded];
 #endif
     
+    [self customizeAppearance];
+    
     return YES;
 }
 							
@@ -49,6 +51,17 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - Helper methods
+
+- (void) customizeAppearance
+{
+    [[UINavigationBar appearance] setTitleTextAttributes:@{
+                                                           NSFontAttributeName : [UIFont fontWithName:@"AcademyEngravedLetPlain" size:22.0f],
+                                                           }];
+    
+    [[UINavigationBar appearance] setTitleVerticalPositionAdjustment:-1.0f forBarMetrics:UIBarMetricsDefault];
 }
 
 @end

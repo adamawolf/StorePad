@@ -11,5 +11,6 @@
 @interface Definitions : NSObject
 
 + (NSString *) contentDataStoreFilename;
++ (NSString *) storeImageNameFromStoreName: (NSString *) storeName;
 
 @end

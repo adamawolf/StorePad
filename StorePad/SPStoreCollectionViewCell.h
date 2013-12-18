@@ -10,4 +10,10 @@
 
 @interface SPStoreCollectionViewCell : UICollectionViewCell
 
+@property (nonatomic, strong) NSDictionary * storeDictionary;
+
+@property (nonatomic, strong) IBOutlet UIImageView * storeImageView;
+@property (nonatomic, strong) IBOutlet UIView * opacityOverlayView;
+@property (nonatomic, strong) IBOutlet UILabel * nameLabel;
+
 @end

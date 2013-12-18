@@ -15,4 +15,9 @@
     return @"Content.sqlite";
 }
 
++ (NSString *) storeImageNameFromStoreName: (NSString *) storeName
+{
+    return [[storeName componentsSeparatedByString:@" "] componentsJoinedByString:@"_"];
+}
+
 @end

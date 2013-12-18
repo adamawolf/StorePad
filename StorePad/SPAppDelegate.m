@@ -60,7 +60,7 @@
     [[[[UIApplication sharedApplication] delegate] window] setTintColor:[Definitions tintColor]];
     
     [[UINavigationBar appearance] setTitleTextAttributes:@{
-                                                           NSFontAttributeName : [UIFont fontWithName:@"AcademyEngravedLetPlain" size:22.0f],
+                                                           NSFontAttributeName : [UIFont fontWithName:@"AcademyEngravedLetPlain" size:23.0f],
                                                            NSForegroundColorAttributeName : [Definitions navigationBarTitleColor],
                                                            }];
     

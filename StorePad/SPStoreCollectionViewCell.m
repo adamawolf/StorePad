@@ -29,11 +29,15 @@
     NSString * imageName = [Definitions storeImageNameFromStoreName:storeDictionary[@"name"]];
     [[self storeImageView] setImage:[UIImage imageNamed:imageName]];
     
-    [[self opacityOverlayView] setAlpha:0.56f];
+    [[self opacityOverlayView] setAlpha:0.55f];
+    //[[self opacityOverlayView] setBackgroundColor:[Definitions navigationBarBackgroundColor]];
     
     [[self nameLabel] setPreferredMaxLayoutWidth:self.frame.size.width - 20.0f];
+    [[self nameLabel] setTextColor:[Definitions navigationBarTitleColor]];
     [[self nameLabel] setText:storeDictionary[@"name"]];
     [[self nameLabel] sizeToFit];
+    
+    [self layer].cornerRadius = 20.0f;
 }
 
 @end

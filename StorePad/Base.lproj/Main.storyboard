@@ -62,9 +62,13 @@
                                                     <color key="shadowColor" red="1" green="1" blue="1" alpha="0.40000000000000002" colorSpace="calibratedRGB"/>
                                                     <size key="shadowOffset" width="0.0" height="1"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQv-68-Ec5" userLabel="Call Button">
-                                                    <rect key="frame" x="8" y="93" width="44" height="44"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQv-68-Ec5" userLabel="Call Button">
+                                                    <rect key="frame" x="4" y="89" width="52" height="52"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="52" id="0QK-AN-8TX"/>
+                                                        <constraint firstAttribute="width" constant="52" id="o8D-NF-bZ3"/>
+                                                    </constraints>
                                                     <state key="normal" image="call_icon">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -73,9 +77,13 @@
                                                         <action selector="callButtonTapped:" destination="3QC-24-agi" eventType="touchUpInside" id="pLW-PX-AJQ"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="221-Sg-MmB" userLabel="Map Button">
-                                                    <rect key="frame" x="93" y="93" width="44" height="44"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="221-Sg-MmB" userLabel="Map Button">
+                                                    <rect key="frame" x="89" y="89" width="52" height="52"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="52" id="C1M-uP-MG8"/>
+                                                        <constraint firstAttribute="width" constant="52" id="Dvs-Xr-IVG"/>
+                                                    </constraints>
                                                     <state key="normal" image="map_icon">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -88,8 +96,12 @@
                                             <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="centerY" secondItem="irU-zc-6fH" secondAttribute="centerY" constant="27" id="0oF-3S-D3r"/>
+                                                <constraint firstItem="hQv-68-Ec5" firstAttribute="leading" secondItem="o11-bi-LdP" secondAttribute="leading" constant="4" id="MPs-vK-Dts"/>
+                                                <constraint firstAttribute="bottom" secondItem="221-Sg-MmB" secondAttribute="bottom" constant="4" id="Mfk-kp-zJU"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="irU-zc-6fH" secondAttribute="trailing" constant="10" id="YTm-zU-qNL"/>
+                                                <constraint firstAttribute="bottom" secondItem="hQv-68-Ec5" secondAttribute="bottom" constant="4" id="hHb-Xy-hnS"/>
                                                 <constraint firstAttribute="centerX" secondItem="irU-zc-6fH" secondAttribute="centerX" id="rFJ-Hs-x97"/>
+                                                <constraint firstAttribute="trailing" secondItem="221-Sg-MmB" secondAttribute="trailing" constant="4" id="wCD-06-I7Y"/>
                                                 <constraint firstItem="irU-zc-6fH" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="o11-bi-LdP" secondAttribute="leading" constant="10" id="yqi-Os-5B3"/>
                                             </constraints>
                                         </view>

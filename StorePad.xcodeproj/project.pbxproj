@@ -10,6 +10,7 @@
 		943841D31861115C00AE5CF6 /* SPStoreCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 943841D21861115C00AE5CF6 /* SPStoreCollectionViewController.m */; };
 		943841D8186111DC00AE5CF6 /* SPStoreCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 943841D7186111DC00AE5CF6 /* SPStoreCollectionViewCell.m */; };
 		943841DC1861203C00AE5CF6 /* AcademyEngravedLET.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 943841DB1861203C00AE5CF6 /* AcademyEngravedLET.ttf */; };
+		943841E01861256200AE5CF6 /* SPLoadingCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 943841DF1861256200AE5CF6 /* SPLoadingCollectionViewCell.m */; };
 		94C1DA72185E6652004D09D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C1DA71185E6652004D09D0 /* Foundation.framework */; };
 		94C1DA74185E6652004D09D0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C1DA73185E6652004D09D0 /* CoreGraphics.framework */; };
 		94C1DA76185E6652004D09D0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C1DA75185E6652004D09D0 /* UIKit.framework */; };
@@ -61,6 +62,8 @@
 		943841D6186111DC00AE5CF6 /* SPStoreCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPStoreCollectionViewCell.h; sourceTree = "<group>"; };
 		943841D7186111DC00AE5CF6 /* SPStoreCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPStoreCollectionViewCell.m; sourceTree = "<group>"; };
 		943841DB1861203C00AE5CF6 /* AcademyEngravedLET.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AcademyEngravedLET.ttf; path = Fonts/AcademyEngravedLET.ttf; sourceTree = "<group>"; };
+		943841DE1861256200AE5CF6 /* SPLoadingCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPLoadingCollectionViewCell.h; sourceTree = "<group>"; };
+		943841DF1861256200AE5CF6 /* SPLoadingCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPLoadingCollectionViewCell.m; sourceTree = "<group>"; };
 		94C1DA6E185E6652004D09D0 /* StorePad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StorePad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94C1DA71185E6652004D09D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		94C1DA73185E6652004D09D0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -142,6 +145,8 @@
 			children = (
 				943841D6186111DC00AE5CF6 /* SPStoreCollectionViewCell.h */,
 				943841D7186111DC00AE5CF6 /* SPStoreCollectionViewCell.m */,
+				943841DE1861256200AE5CF6 /* SPLoadingCollectionViewCell.h */,
+				943841DF1861256200AE5CF6 /* SPLoadingCollectionViewCell.m */,
 			);
 			name = "Collection View Cells";
 			sourceTree = "<group>";
@@ -404,6 +409,7 @@
 				94C1DAB8185E6AF5004D09D0 /* Definitions.m in Sources */,
 				94C1DA82185E6652004D09D0 /* SPAppDelegate.m in Sources */,
 				94C1DAB2185E6974004D09D0 /* SPCoreDataController.m in Sources */,
+				943841E01861256200AE5CF6 /* SPLoadingCollectionViewCell.m in Sources */,
 				94C1DAAE185E68E6004D09D0 /* Store.m in Sources */,
 				943841D8186111DC00AE5CF6 /* SPStoreCollectionViewCell.m in Sources */,
 				943841D31861115C00AE5CF6 /* SPStoreCollectionViewController.m in Sources */,

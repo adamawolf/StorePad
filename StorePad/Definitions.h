@@ -13,4 +13,6 @@
 + (NSString *) contentDataStoreFilename;
 + (NSString *) storeImageNameFromStoreName: (NSString *) storeName;
 
++ (UIColor *) viewControllerBackgroundColor;
+
 @end

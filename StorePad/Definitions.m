@@ -20,4 +20,15 @@
     return [[storeName componentsSeparatedByString:@" "] componentsJoinedByString:@"_"];
 }
 
++ (UIColor *) viewControllerBackgroundColor
+{
+    static UIColor * _viewControllerBackgroundColor = nil;
+    if (!_viewControllerBackgroundColor)
+    {
+        _viewControllerBackgroundColor = [UIColor colorWithWhite:0.95 alpha:1.0f];
+    }
+    
+    return _viewControllerBackgroundColor;
+}
+
 @end

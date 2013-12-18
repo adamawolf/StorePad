@@ -9,7 +9,9 @@
 #import "SPStoreCollectionViewController.h"
 #import "SPCoreDataController.h"
 #import "SPStoreCollectionViewCell.h"
+#import "SPLoadingCollectionViewCell.h"
 
+static NSString * LoadingCellIdentifier = @"SPLoadingCollectionViewCell";
 static NSString * StoreCellIdentifier = @"SPStoreCollectionViewCell";
 
 @interface SPStoreCollectionViewController () <UICollectionViewDataSource, UICollectionViewDelegate, SPCoreDataControllerStoreLoadingDelegate>
@@ -27,14 +29,23 @@ static NSString * StoreCellIdentifier = @"SPStoreCollectionViewCell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return [[self stores] count];
+    return [self stores] != nil ? [[self stores] count] : 1;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     UICollectionViewCell * cell = nil;
     
-    cell = [collectionView dequeueReusableCellWithReuseIdentifier:StoreCellIdentifier forIndexPath:indexPath];
+    BOOL dataLoaded = [self stores] != nil;
+    
+    if (dataLoaded)
+    {
+        cell = [collectionView dequeueReusableCellWithReuseIdentifier:StoreCellIdentifier forIndexPath:indexPath];
+    }
+    else
+    {
+        cell = [collectionView dequeueReusableCellWithReuseIdentifier:LoadingCellIdentifier forIndexPath:indexPath];
+    }
     
     [self configureCell:cell atIndexPath:indexPath];
     
@@ -50,11 +61,29 @@ static NSString * StoreCellIdentifier = @"SPStoreCollectionViewCell";
         SPStoreCollectionViewCell * storeCell = (SPStoreCollectionViewCell *)cell;
         [storeCell setStoreDictionary:storeDictionary];
     }
+    else if ([cell isKindOfClass:[SPLoadingCollectionViewCell class]])
+    {
+        SPLoadingCollectionViewCell * loadingCell = (SPLoadingCollectionViewCell *)cell;
+        [loadingCell configureCell];
+    }
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(160.0f, 160.0f);
+    BOOL dataLoaded = [self stores] != nil;
+    
+    CGSize size;
+    
+    if (dataLoaded)
+    {
+        size = CGSizeMake(160.0f, 160.0f);
+    }
+    else
+    {
+        size = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height - 64.0f);
+    }
+    
+    return size;
 }
 
 #pragma mark - SPCoreDataControllerStoreLoadingDelegate methods

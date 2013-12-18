@@ -34,7 +34,7 @@
                         </collectionViewFlowLayout>
                         <cells>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SPStoreCollectionViewCell" id="3QC-24-agi" customClass="SPStoreCollectionViewCell">
-                                <rect key="frame" x="0.0" y="64" width="160" height="160"/>
+                                <rect key="frame" x="80" y="64" width="160" height="160"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
@@ -92,14 +92,29 @@
                                     <outlet property="storeImageView" destination="fZk-4Z-n9D" id="9s5-iZ-8gC"/>
                                 </connections>
                             </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="uoB-lp-FUD">
-                                <rect key="frame" x="160" y="64" width="160" height="160"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SPLoadingCollectionViewCell" id="uoB-lp-FUD" customClass="SPLoadingCollectionViewCell">
+                                <rect key="frame" x="0.0" y="224" width="320" height="504"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" misplaced="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="vYW-xR-raV">
+                                            <rect key="frame" x="142" y="266" width="37" height="37"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="color" red="0.69411764710000001" green="0.71372549019999998" blue="0.73333333329999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        </activityIndicatorView>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <constraints>
+                                    <constraint firstAttribute="centerY" secondItem="vYW-xR-raV" secondAttribute="centerY" id="263-7e-um4"/>
+                                    <constraint firstAttribute="centerX" secondItem="vYW-xR-raV" secondAttribute="centerX" id="XgU-bJ-qFa"/>
+                                </constraints>
+                                <size key="customSize" width="320" height="504"/>
+                                <connections>
+                                    <outlet property="spinner" destination="vYW-xR-raV" id="WfN-o2-1UG"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>

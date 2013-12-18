@@ -166,7 +166,6 @@
 				94C1DA96185E6652004D09D0 /* StorePadTests */,
 				94C1DA70185E6652004D09D0 /* Frameworks */,
 				94C1DA6F185E6652004D09D0 /* Products */,
-				94C1DAD3185E73CA004D09D0 /* StorePad copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -216,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				94C1DA79185E6652004D09D0 /* StorePad-Info.plist */,
+				94C1DAD3185E73CA004D09D0 /* StorePad copy-Info.plist */,
 				94C1DA7A185E6652004D09D0 /* InfoPlist.strings */,
 				94C1DA7D185E6652004D09D0 /* main.m */,
 				94C1DA7F185E6652004D09D0 /* StorePad-Prefix.pch */,

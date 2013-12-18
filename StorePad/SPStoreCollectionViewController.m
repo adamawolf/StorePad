@@ -10,11 +10,12 @@
 #import "SPCoreDataController.h"
 #import "SPStoreCollectionViewCell.h"
 #import "SPLoadingCollectionViewCell.h"
+#import <MapKit/MapKit.h>
 
 static NSString * LoadingCellIdentifier = @"SPLoadingCollectionViewCell";
 static NSString * StoreCellIdentifier = @"SPStoreCollectionViewCell";
 
-@interface SPStoreCollectionViewController () <UICollectionViewDataSource, UICollectionViewDelegate, SPCoreDataControllerStoreLoadingDelegate>
+@interface SPStoreCollectionViewController () <UICollectionViewDataSource, UICollectionViewDelegate, SPCoreDataControllerStoreLoadingDelegate, SPStoreCollectionViewCellDelegate>
 
 @property (nonatomic, strong) NSArray * stores;
 
@@ -62,6 +63,7 @@ static NSString * StoreCellIdentifier = @"SPStoreCollectionViewCell";
         
         SPStoreCollectionViewCell * storeCell = (SPStoreCollectionViewCell *)cell;
         [storeCell setStoreDictionary:storeDictionary];
+        [storeCell setDelegate:self];
     }
     else if ([cell isKindOfClass:[SPLoadingCollectionViewCell class]])
     {
@@ -94,6 +96,51 @@ static NSString * StoreCellIdentifier = @"SPStoreCollectionViewCell";
 {
     [self setStores:storeDictionaries];
     [[self collectionView] reloadSections:[NSIndexSet indexSetWithIndex:0]];
+}
+
+#pragma mark - SPStoreCollectionViewCellDelegate methods
+
+- (void) storeCollectionViewCellDidTapCallButton: (SPStoreCollectionViewCell *) storeCell
+{
+    NSDictionary * storeDictionary = [storeCell storeDictionary];
+    
+    NSString *phoneNumber = [@"tel://" stringByAppendingString:storeDictionary[@"phoneNumber"]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
+}
+
+- (void) storeCollectionViewCellDidTapMapButton: (SPStoreCollectionViewCell *) storeCell
+{
+    NSDictionary * storeDictionary = [storeCell storeDictionary];
+    NSString * addressString = [Definitions addressStringFromStoreDictionary:storeDictionary];
+    
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    
+    [geocoder geocodeAddressString:addressString
+                 completionHandler:^(NSArray *placemarks, NSError *error) {
+                     
+                     // Convert the CLPlacemark to an MKPlacemark
+                     // Note: There's no error checking for a failed geocode
+                     CLPlacemark *geocodedPlacemark = [placemarks objectAtIndex:0];
+                     MKPlacemark *placemark = [[MKPlacemark alloc]
+                                               initWithCoordinate:geocodedPlacemark.location.coordinate
+                                               addressDictionary:geocodedPlacemark.addressDictionary];
+                     
+                     // Create a map item for the geocoded address to pass to Maps app
+                     MKMapItem *mapItem = [[MKMapItem alloc] initWithPlacemark:placemark];
+                     [mapItem setName:geocodedPlacemark.name];
+                     
+                     // Set the directions mode to "Driving"
+                     // Can use MKLaunchOptionsDirectionsModeWalking instead
+                     NSDictionary *launchOptions = @{MKLaunchOptionsDirectionsModeKey : MKLaunchOptionsDirectionsModeDriving};
+                     
+                     // Get the "Current User Location" MKMapItem
+                     MKMapItem *currentLocationMapItem = [MKMapItem mapItemForCurrentLocation];
+                     
+                     // Pass the current location and destination map items to the Maps app
+                     // Set the direction mode in the launchOptions dictionary
+                     [MKMapItem openMapsWithItems:@[currentLocationMapItem, mapItem] launchOptions:launchOptions];
+                     
+                 }];
 }
 
 @end

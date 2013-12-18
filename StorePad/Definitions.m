@@ -20,6 +20,19 @@
     return [[storeName componentsSeparatedByString:@" "] componentsJoinedByString:@"_"];
 }
 
++ (NSString *) addressStringFromStoreDictionary: (NSDictionary *) storeDictionary
+{
+    NSMutableArray * lines = [NSMutableArray new];
+    
+    [lines addObject:storeDictionary[@"addressLine1"]];
+    if (storeDictionary[@"addressLine2"]) [lines addObject:storeDictionary[@"addressLine2"]];
+    if (storeDictionary[@"addressLine3"]) [lines addObject:storeDictionary[@"addressLine3"]];
+    [lines addObject:[NSString stringWithFormat:@"%@, %@", storeDictionary[@"city"], storeDictionary[@"state"]]];
+    [lines addObject:storeDictionary[@"zip"]];
+    
+    return [lines componentsJoinedByString:@"\n"];
+}
+
 + (UIColor *) tintColor
 {
     static UIColor * _tintColor = nil;

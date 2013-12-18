@@ -12,6 +12,7 @@
 
 + (NSString *) contentDataStoreFilename;
 + (NSString *) storeImageNameFromStoreName: (NSString *) storeName;
++ (NSString *) addressStringFromStoreDictionary: (NSDictionary *) storeDictionary;
 
 + (UIColor *) tintColor;
 + (UIColor *) navigationBarTitleColor;

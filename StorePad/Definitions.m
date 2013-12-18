@@ -25,7 +25,7 @@
     static UIColor * _viewControllerBackgroundColor = nil;
     if (!_viewControllerBackgroundColor)
     {
-        _viewControllerBackgroundColor = [UIColor colorWithWhite:0.95 alpha:1.0f];
+        _viewControllerBackgroundColor = [UIColor colorWithWhite:0.88 alpha:1.0f];
     }
     
     return _viewControllerBackgroundColor;

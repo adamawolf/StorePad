@@ -24,6 +24,8 @@ static NSString * StoreCellIdentifier = @"SPStoreCollectionViewCell";
 
 - (void) viewDidLoad
 {
+    [[self collectionView] setBackgroundColor:[Definitions viewControllerBackgroundColor]];
+    
     [[SPCoreDataController sharedController] fetchAllStoreDictionariesInBackgroundWithDelegate:self];
 }
 
@@ -76,11 +78,11 @@ static NSString * StoreCellIdentifier = @"SPStoreCollectionViewCell";
     
     if (dataLoaded)
     {
-        size = CGSizeMake(160.0f, 160.0f);
+        size = CGSizeMake(145.0f, 145.0f);
     }
     else
     {
-        size = CGSizeMake(self.view.frame.size.width, self.view.frame.size.height - 64.0f);
+        size = CGSizeMake(self.view.frame.size.width - 20.0f, self.view.frame.size.height - (64.0f + 20.0f));
     }
     
     return size;

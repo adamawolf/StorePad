@@ -29,7 +29,7 @@
     NSString * imageName = [Definitions storeImageNameFromStoreName:storeDictionary[@"name"]];
     [[self storeImageView] setImage:[UIImage imageNamed:imageName]];
     
-    [[self opacityOverlayView] setAlpha:0.46f];
+    [[self opacityOverlayView] setAlpha:0.56f];
     
     [[self nameLabel] setPreferredMaxLayoutWidth:self.frame.size.width - 20.0f];
     [[self nameLabel] setText:storeDictionary[@"name"]];

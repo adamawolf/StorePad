@@ -11,6 +11,10 @@
 		943841D8186111DC00AE5CF6 /* SPStoreCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 943841D7186111DC00AE5CF6 /* SPStoreCollectionViewCell.m */; };
 		943841DC1861203C00AE5CF6 /* AcademyEngravedLET.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 943841DB1861203C00AE5CF6 /* AcademyEngravedLET.ttf */; };
 		943841E01861256200AE5CF6 /* SPLoadingCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 943841DF1861256200AE5CF6 /* SPLoadingCollectionViewCell.m */; };
+		9449502218626E3F00D318F1 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9449501C18626E3F00D318F1 /* libTestFlight.a */; };
+		9449502318626E3F00D318F1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9449501D18626E3F00D318F1 /* README.md */; };
+		9449502418626E3F00D318F1 /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 9449501E18626E3F00D318F1 /* release_notes.md */; };
+		9449502618626E9400D318F1 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9449502518626E9400D318F1 /* libz.dylib */; };
 		946C608C186263D500DB52C0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 946C608B186263D500DB52C0 /* MapKit.framework */; };
 		94C1DA72185E6652004D09D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C1DA71185E6652004D09D0 /* Foundation.framework */; };
 		94C1DA74185E6652004D09D0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C1DA73185E6652004D09D0 /* CoreGraphics.framework */; };
@@ -65,8 +69,15 @@
 		943841DB1861203C00AE5CF6 /* AcademyEngravedLET.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AcademyEngravedLET.ttf; path = Fonts/AcademyEngravedLET.ttf; sourceTree = "<group>"; };
 		943841DE1861256200AE5CF6 /* SPLoadingCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPLoadingCollectionViewCell.h; sourceTree = "<group>"; };
 		943841DF1861256200AE5CF6 /* SPLoadingCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPLoadingCollectionViewCell.m; sourceTree = "<group>"; };
+		9449501C18626E3F00D318F1 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
+		9449501D18626E3F00D318F1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		9449501E18626E3F00D318F1 /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
+		9449501F18626E3F00D318F1 /* TestFlight+AsyncLogging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+AsyncLogging.h"; sourceTree = "<group>"; };
+		9449502018626E3F00D318F1 /* TestFlight+ManualSessions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TestFlight+ManualSessions.h"; sourceTree = "<group>"; };
+		9449502118626E3F00D318F1 /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
+		9449502518626E9400D318F1 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		946C608B186263D500DB52C0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
-		94C1DA6E185E6652004D09D0 /* StorePad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StorePad.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		94C1DA6E185E6652004D09D0 /* BooksInc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BooksInc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94C1DA71185E6652004D09D0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		94C1DA73185E6652004D09D0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		94C1DA75185E6652004D09D0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -102,6 +113,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9449502618626E9400D318F1 /* libz.dylib in Frameworks */,
+				9449502218626E3F00D318F1 /* libTestFlight.a in Frameworks */,
 				94C1DAB4185E6993004D09D0 /* CoreData.framework in Frameworks */,
 				94C1DA74185E6652004D09D0 /* CoreGraphics.framework in Frameworks */,
 				94C1DA76185E6652004D09D0 /* UIKit.framework in Frameworks */,
@@ -162,6 +175,19 @@
 			name = Fonts;
 			sourceTree = "<group>";
 		};
+		9449501B18626E3F00D318F1 /* TestFlight */ = {
+			isa = PBXGroup;
+			children = (
+				9449501C18626E3F00D318F1 /* libTestFlight.a */,
+				9449501D18626E3F00D318F1 /* README.md */,
+				9449501E18626E3F00D318F1 /* release_notes.md */,
+				9449501F18626E3F00D318F1 /* TestFlight+AsyncLogging.h */,
+				9449502018626E3F00D318F1 /* TestFlight+ManualSessions.h */,
+				9449502118626E3F00D318F1 /* TestFlight.h */,
+			);
+			path = TestFlight;
+			sourceTree = "<group>";
+		};
 		94C1DA65185E6652004D09D0 = {
 			isa = PBXGroup;
 			children = (
@@ -175,7 +201,7 @@
 		94C1DA6F185E6652004D09D0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				94C1DA6E185E6652004D09D0 /* StorePad.app */,
+				94C1DA6E185E6652004D09D0 /* BooksInc.app */,
 				94C1DA8F185E6652004D09D0 /* StorePadTests.xctest */,
 				94C1DAD2185E73C9004D09D0 /* StorePad copy.app */,
 			);
@@ -185,6 +211,8 @@
 		94C1DA70185E6652004D09D0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9449502518626E9400D318F1 /* libz.dylib */,
+				9449501B18626E3F00D318F1 /* TestFlight */,
 				946C608B186263D500DB52C0 /* MapKit.framework */,
 				94C1DAB3185E6993004D09D0 /* CoreData.framework */,
 				94C1DA71185E6652004D09D0 /* Foundation.framework */,
@@ -283,9 +311,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		94C1DA6D185E6652004D09D0 /* StorePad */ = {
+		94C1DA6D185E6652004D09D0 /* BooksInc */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 94C1DAA0185E6652004D09D0 /* Build configuration list for PBXNativeTarget "StorePad" */;
+			buildConfigurationList = 94C1DAA0185E6652004D09D0 /* Build configuration list for PBXNativeTarget "BooksInc" */;
 			buildPhases = (
 				94C1DA6A185E6652004D09D0 /* Sources */,
 				94C1DA6B185E6652004D09D0 /* Frameworks */,
@@ -295,9 +323,9 @@
 			);
 			dependencies = (
 			);
-			name = StorePad;
+			name = BooksInc;
 			productName = StorePad;
-			productReference = 94C1DA6E185E6652004D09D0 /* StorePad.app */;
+			productReference = 94C1DA6E185E6652004D09D0 /* BooksInc.app */;
 			productType = "com.apple.product-type.application";
 		};
 		94C1DA8E185E6652004D09D0 /* StorePadTests */ = {
@@ -363,7 +391,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				94C1DA6D185E6652004D09D0 /* StorePad */,
+				94C1DA6D185E6652004D09D0 /* BooksInc */,
 				94C1DABC185E73C9004D09D0 /* Contentgen */,
 				94C1DA8E185E6652004D09D0 /* StorePadTests */,
 			);
@@ -375,9 +403,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9449502318626E3F00D318F1 /* README.md in Resources */,
 				94C1DA8A185E6652004D09D0 /* Images.xcassets in Resources */,
 				94C1DABB185E70D8004D09D0 /* Content.sqlite in Resources */,
 				94C1DA7C185E6652004D09D0 /* InfoPlist.strings in Resources */,
+				9449502418626E3F00D318F1 /* release_notes.md in Resources */,
 				94C1DA85185E6652004D09D0 /* Main.storyboard in Resources */,
 				943841DC1861203C00AE5CF6 /* AcademyEngravedLET.ttf in Resources */,
 			);
@@ -447,7 +477,7 @@
 /* Begin PBXTargetDependency section */
 		94C1DA95185E6652004D09D0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 94C1DA6D185E6652004D09D0 /* StorePad */;
+			target = 94C1DA6D185E6652004D09D0 /* BooksInc */;
 			targetProxy = 94C1DA94185E6652004D09D0 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -480,6 +510,93 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9449501718626CD800D318F1 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Flairify LLC (3P4KBPGH6G)";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = AdHoc;
+		};
+		9449501818626CD800D318F1 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StorePad/StorePad-Prefix.pch";
+				INFOPLIST_FILE = "StorePad/StorePad-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/adamawolf/Projects/StorePad/TestFlight,
+				);
+				OTHER_CFLAGS = "-DDLOG";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = AdHoc;
+		};
+		9449501918626CD800D318F1 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StorePad/StorePad-Prefix.pch";
+				INFOPLIST_FILE = "StorePad copy-Info.plist";
+				OTHER_CFLAGS = (
+					"-DCONTENTGEN",
+					"-DDLOG",
+				);
+				PRODUCT_NAME = "StorePad copy";
+				WRAPPER_EXTENSION = app;
+			};
+			name = AdHoc;
+		};
+		9449501A18626CD800D318F1 /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StorePad.app/StorePad";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "StorePad/StorePad-Prefix.pch";
+				INFOPLIST_FILE = "StorePadTests/StorePadTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = AdHoc;
+		};
 		94C1DA9E185E6652004D09D0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -560,6 +677,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StorePad/StorePad-Prefix.pch";
 				INFOPLIST_FILE = "StorePad/StorePad-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/adamawolf/Projects/StorePad/TestFlight,
+				);
 				OTHER_CFLAGS = "-DDLOG";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -574,6 +695,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StorePad/StorePad-Prefix.pch";
 				INFOPLIST_FILE = "StorePad/StorePad-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/adamawolf/Projects/StorePad/TestFlight,
+				);
 				OTHER_CFLAGS = "-DDLOG";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -664,15 +789,17 @@
 			buildConfigurations = (
 				94C1DA9E185E6652004D09D0 /* Debug */,
 				94C1DA9F185E6652004D09D0 /* Release */,
+				9449501718626CD800D318F1 /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		94C1DAA0185E6652004D09D0 /* Build configuration list for PBXNativeTarget "StorePad" */ = {
+		94C1DAA0185E6652004D09D0 /* Build configuration list for PBXNativeTarget "BooksInc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				94C1DAA1185E6652004D09D0 /* Debug */,
 				94C1DAA2185E6652004D09D0 /* Release */,
+				9449501818626CD800D318F1 /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -682,6 +809,7 @@
 			buildConfigurations = (
 				94C1DAA4185E6652004D09D0 /* Debug */,
 				94C1DAA5185E6652004D09D0 /* Release */,
+				9449501A18626CD800D318F1 /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -691,6 +819,7 @@
 			buildConfigurations = (
 				94C1DAD0185E73C9004D09D0 /* Debug */,
 				94C1DAD1185E73C9004D09D0 /* Release */,
+				9449501918626CD800D318F1 /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

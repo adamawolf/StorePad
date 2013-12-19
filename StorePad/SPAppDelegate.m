@@ -8,7 +8,7 @@
 
 #import "SPAppDelegate.h"
 #import "SPCoreDataController.h"
-
+#import "TestFlight.h"
 
 
 @implementation SPAppDelegate
@@ -18,6 +18,7 @@
 #ifdef CONTENTGEN
     [[SPCoreDataController sharedController] generateContent];
 #else
+    [TestFlight takeOff:@"59dadeb3-8374-4ed7-8dd6-1e69dcc5080a"];
     [[SPCoreDataController sharedController] createEditableCopyOfContentDatabaseIfNeeded];
 #endif
     

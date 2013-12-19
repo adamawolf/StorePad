@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "94C1DA6D185E6652004D09D0"
-               BuildableName = "StorePad.app"
-               BlueprintName = "StorePad"
+               BlueprintIdentifier = "94C1DABC185E73C9004D09D0"
+               BuildableName = "StorePad copy.app"
+               BlueprintName = "Contentgen"
                ReferencedContainer = "container:StorePad.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,23 +28,13 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "94C1DA8E185E6652004D09D0"
-               BuildableName = "StorePadTests.xctest"
-               BlueprintName = "StorePadTests"
-               ReferencedContainer = "container:StorePad.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "94C1DA6D185E6652004D09D0"
-            BuildableName = "StorePad.app"
-            BlueprintName = "StorePad"
+            BlueprintIdentifier = "94C1DABC185E73C9004D09D0"
+            BuildableName = "StorePad copy.app"
+            BlueprintName = "Contentgen"
             ReferencedContainer = "container:StorePad.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -61,9 +51,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "94C1DA6D185E6652004D09D0"
-            BuildableName = "StorePad.app"
-            BlueprintName = "StorePad"
+            BlueprintIdentifier = "94C1DABC185E73C9004D09D0"
+            BuildableName = "StorePad copy.app"
+            BlueprintName = "Contentgen"
             ReferencedContainer = "container:StorePad.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -79,9 +69,9 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "94C1DA6D185E6652004D09D0"
-            BuildableName = "StorePad.app"
-            BlueprintName = "StorePad"
+            BlueprintIdentifier = "94C1DABC185E73C9004D09D0"
+            BuildableName = "StorePad copy.app"
+            BlueprintName = "Contentgen"
             ReferencedContainer = "container:StorePad.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

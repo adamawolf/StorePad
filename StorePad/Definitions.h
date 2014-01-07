@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define SPUserDefaults_LastLaunchVersion    @"SPUserDefaults_LastLaunchVersion"
+
 @interface Definitions : NSObject
 
 + (NSString *) contentDataStoreFilename;

@@ -185,6 +185,22 @@ static dispatch_queue_t background_save_queue()
 
 #pragma mark - Generic Helper methods
 
+- (void) deleteEditableCopyOfContentDatabase
+{
+	NSFileManager *fileManager = [NSFileManager defaultManager];
+	NSError * error = nil;
+    
+	NSString * writableDocumentsPath = [[SPCoreDataController applicationDocumentsDirectory] stringByAppendingPathComponent:[Definitions contentDataStoreFilename]];
+    
+    //always overwrite existing content database with version from resources
+	
+	BOOL exists = [fileManager fileExistsAtPath:writableDocumentsPath];
+    if (exists)
+    {
+        [fileManager removeItemAtPath:writableDocumentsPath error:&error];
+    }
+}
+
 - (void) createEditableCopyOfContentDatabaseIfNeeded
 {
 	BOOL success;
@@ -205,7 +221,7 @@ static dispatch_queue_t background_save_queue()
             DLog(@"ERROR: Failed to create writable %@ file with message '%@'.", [Definitions contentDataStoreFilename], [error localizedDescription]);
         }
         
-        DLog(@"%@ initially copied to app Documents directory.", [Definitions contentDataStoreFilename]);
+        DLog(@"%@ copied from resource bundle to app Documents directory.", [Definitions contentDataStoreFilename]);
     }
 }
 
@@ -242,7 +258,7 @@ static dispatch_queue_t background_save_queue()
                              @"city": @"Alameda",
                              @"zip": @"94501",
                              @"state": @"CA",
-                             @"phoneNumber": @"510-522-222",
+                             @"phoneNumber": @"510-522-2226",
                              @"fax": @"510-522-8880"
                              },
                          @{

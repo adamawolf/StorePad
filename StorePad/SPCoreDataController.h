@@ -34,6 +34,7 @@
 - (void) generateContent;
 #endif
 
+- (void) deleteEditableCopyOfContentDatabase;
 - (void) createEditableCopyOfContentDatabaseIfNeeded;
 
 - (void) fetchAllStoreDictionariesInBackgroundWithDelegate: (id<SPCoreDataControllerStoreLoadingDelegate>) delegate;

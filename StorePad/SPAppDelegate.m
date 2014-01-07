@@ -19,10 +19,12 @@
     [[SPCoreDataController sharedController] generateContent];
 #else
     [TestFlight takeOff:@"59dadeb3-8374-4ed7-8dd6-1e69dcc5080a"];
+    
+    [self deleteContentDatabaseIfAppropriate];
     [[SPCoreDataController sharedController] createEditableCopyOfContentDatabaseIfNeeded];
-#endif
     
     [self customizeAppearance];
+#endif
     
     return YES;
 }
@@ -71,6 +73,33 @@
                                                            }];
     
     [[UINavigationBar appearance] setBarTintColor:[Definitions navigationBarBackgroundColor]];
+}
+
+- (void) deleteContentDatabaseIfAppropriate
+{
+    BOOL shouldOverwrite = NO;
+    
+    NSString * lastLaunchVersion = [[NSUserDefaults standardUserDefaults] stringForKey:SPUserDefaults_LastLaunchVersion];
+	NSString * appVersionString = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];
+    
+    if (!lastLaunchVersion)
+    {
+        shouldOverwrite = YES;
+        
+        [[NSUserDefaults standardUserDefaults] setObject:appVersionString forKey:SPUserDefaults_LastLaunchVersion];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+    }
+    else if ([lastLaunchVersion isEqualToString:appVersionString] == NO)
+    {
+        shouldOverwrite = YES;
+    }
+    
+    if (shouldOverwrite)
+    {
+        DLog(@"Moving from version %@ to %@. Deleting content database.", lastLaunchVersion, appVersionString);
+        
+        [[SPCoreDataController sharedController] deleteEditableCopyOfContentDatabase];
+    }
 }
 
 @end

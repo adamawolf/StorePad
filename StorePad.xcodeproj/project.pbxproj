@@ -11,6 +11,7 @@
 		943841D8186111DC00AE5CF6 /* SPStoreCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 943841D7186111DC00AE5CF6 /* SPStoreCollectionViewCell.m */; };
 		943841DC1861203C00AE5CF6 /* AcademyEngravedLET.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 943841DB1861203C00AE5CF6 /* AcademyEngravedLET.ttf */; };
 		943841E01861256200AE5CF6 /* SPLoadingCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 943841DF1861256200AE5CF6 /* SPLoadingCollectionViewCell.m */; };
+		943949E0187B8D97009F3D18 /* SPWebsiteCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 943949DF187B8D97009F3D18 /* SPWebsiteCollectionViewCell.m */; };
 		9449502218626E3F00D318F1 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9449501C18626E3F00D318F1 /* libTestFlight.a */; };
 		9449502318626E3F00D318F1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9449501D18626E3F00D318F1 /* README.md */; };
 		9449502418626E3F00D318F1 /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 9449501E18626E3F00D318F1 /* release_notes.md */; };
@@ -69,6 +70,8 @@
 		943841DB1861203C00AE5CF6 /* AcademyEngravedLET.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = AcademyEngravedLET.ttf; path = Fonts/AcademyEngravedLET.ttf; sourceTree = "<group>"; };
 		943841DE1861256200AE5CF6 /* SPLoadingCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPLoadingCollectionViewCell.h; sourceTree = "<group>"; };
 		943841DF1861256200AE5CF6 /* SPLoadingCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPLoadingCollectionViewCell.m; sourceTree = "<group>"; };
+		943949DE187B8D97009F3D18 /* SPWebsiteCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPWebsiteCollectionViewCell.h; sourceTree = "<group>"; };
+		943949DF187B8D97009F3D18 /* SPWebsiteCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPWebsiteCollectionViewCell.m; sourceTree = "<group>"; };
 		9449501C18626E3F00D318F1 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		9449501D18626E3F00D318F1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		9449501E18626E3F00D318F1 /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
@@ -163,6 +166,8 @@
 				943841D7186111DC00AE5CF6 /* SPStoreCollectionViewCell.m */,
 				943841DE1861256200AE5CF6 /* SPLoadingCollectionViewCell.h */,
 				943841DF1861256200AE5CF6 /* SPLoadingCollectionViewCell.m */,
+				943949DE187B8D97009F3D18 /* SPWebsiteCollectionViewCell.h */,
+				943949DF187B8D97009F3D18 /* SPWebsiteCollectionViewCell.m */,
 			);
 			name = "Collection View Cells";
 			sourceTree = "<group>";
@@ -440,6 +445,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94C1DA7E185E6652004D09D0 /* main.m in Sources */,
+				943949E0187B8D97009F3D18 /* SPWebsiteCollectionViewCell.m in Sources */,
 				94C1DAB8185E6AF5004D09D0 /* Definitions.m in Sources */,
 				94C1DA82185E6652004D09D0 /* SPAppDelegate.m in Sources */,
 				94C1DAB2185E6974004D09D0 /* SPCoreDataController.m in Sources */,

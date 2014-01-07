@@ -9,13 +9,15 @@
 #import "SPStoreCollectionViewController.h"
 #import "SPCoreDataController.h"
 #import "SPStoreCollectionViewCell.h"
+#import "SPWebsiteCollectionViewCell.h"
 #import "SPLoadingCollectionViewCell.h"
 #import <MapKit/MapKit.h>
 
 static NSString * LoadingCellIdentifier = @"SPLoadingCollectionViewCell";
 static NSString * StoreCellIdentifier = @"SPStoreCollectionViewCell";
+static NSString * WebsiteCellIdentifier = @"SPWebsiteCollectionViewCell";
 
-@interface SPStoreCollectionViewController () <UICollectionViewDataSource, UICollectionViewDelegate, SPCoreDataControllerStoreLoadingDelegate, SPStoreCollectionViewCellDelegate>
+@interface SPStoreCollectionViewController () <UICollectionViewDataSource, UICollectionViewDelegate, SPCoreDataControllerStoreLoadingDelegate, SPStoreCollectionViewCellDelegate, SPWebsiteCollectionViewCellDelegate>
 
 @property (nonatomic, strong) NSArray * stores;
 
@@ -34,7 +36,7 @@ static NSString * StoreCellIdentifier = @"SPStoreCollectionViewCell";
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return [self stores] != nil ? [[self stores] count] : 1;
+    return [self stores] != nil ? [[self stores] count] + 1 : 1;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -45,7 +47,14 @@ static NSString * StoreCellIdentifier = @"SPStoreCollectionViewCell";
     
     if (dataLoaded)
     {
-        cell = [collectionView dequeueReusableCellWithReuseIdentifier:StoreCellIdentifier forIndexPath:indexPath];
+        if ([indexPath row] < [[self stores] count])
+        {
+            cell = [collectionView dequeueReusableCellWithReuseIdentifier:StoreCellIdentifier forIndexPath:indexPath];
+        }
+        else
+        {
+            cell = [collectionView dequeueReusableCellWithReuseIdentifier:WebsiteCellIdentifier forIndexPath:indexPath];
+        }
     }
     else
     {
@@ -66,6 +75,17 @@ static NSString * StoreCellIdentifier = @"SPStoreCollectionViewCell";
         SPStoreCollectionViewCell * storeCell = (SPStoreCollectionViewCell *)cell;
         [storeCell setStoreDictionary:storeDictionary];
         [storeCell setDelegate:self];
+    }
+    else if ([cell isKindOfClass:[SPWebsiteCollectionViewCell class]])
+    {
+        NSDictionary * websiteDictionary = @{
+                                             @"name": @"Website",
+                                             @"url": @"http://www.booksinc.net"
+                                             };
+        
+        SPWebsiteCollectionViewCell * websiteCell = (SPWebsiteCollectionViewCell *)cell;
+        [websiteCell setWebsiteDictionary:websiteDictionary];
+        [websiteCell setDelegate:self];
     }
     else if ([cell isKindOfClass:[SPLoadingCollectionViewCell class]])
     {
@@ -143,6 +163,15 @@ static NSString * StoreCellIdentifier = @"SPStoreCollectionViewCell";
                      [MKMapItem openMapsWithItems:@[currentLocationMapItem, mapItem] launchOptions:launchOptions];
                      
                  }];
+}
+
+#pragma mark - SPWebsiteCollectionViewCellDelegate methods
+
+- (void) websiteCollectionViewCellDidTapGoButton: (SPWebsiteCollectionViewCell *) websiteCell
+{
+    NSDictionary * websiteDictionary = [websiteCell websiteDictionary];
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:websiteDictionary[@"url"]]];
 }
 
 @end
